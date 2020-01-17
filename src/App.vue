@@ -6,6 +6,7 @@
       <router-link to="/resume">Resume</router-link> |
       <div class="submenu">
         <a>Projects</a>
+        &nbsp;<i class="fa fa-caret-down"></i>
          <div class="submenu-content">
            <router-link to="/projects/synthwave">Project 1</router-link>
            <router-link to="/projects/project2">Project 2</router-link>

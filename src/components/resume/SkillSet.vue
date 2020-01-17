@@ -1,10 +1,10 @@
 <template>
   <div class="skill-set">
     <h3>{{skillSet.title}}</h3>
-    <ul class="skil-list">
+    <ul class="skill-list">
       <li
         v-for='skill in skillSet.skills'
-        v-bind:key='skill'
+        :key='skill'
       >
         {{skill}}
       </li>
@@ -14,9 +14,9 @@
 
 <style scoped>
 .skill-list {
-  -webkit-columns: 2 200px;
-     -moz-columns: 2 200px;
-          columns: 2 200px;
+  column-count: 3;
+  column-width: 165px;
+  column-gap: 12px;
 }
 </style>
 

@@ -4,6 +4,7 @@
     :class="className"
     @click="helloWorld"
   >
+    <i class="fa fa-globe"></i>
     Hello <strong>World</strong>
     <div class="glare"/>
   </button>
