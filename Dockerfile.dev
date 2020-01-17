@@ -1,0 +1,6 @@
+FROM node:alpine
+WORKDIR /resume-vue
+COPY package.json package-lock.json /resume-vue/
+RUN npm install
+
+CMD npm run serve
