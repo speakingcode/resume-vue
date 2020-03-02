@@ -1,7 +1,7 @@
 export default {
   name: 'Daniel Sean Lissner',
   title: 'Software Engineer/Developer',
-  summary: 'Motivated, supportive, self-starting software engineer with deep experience throughout the stack and emphasis on quality, good practices, and simplicity',
+  summary: 'Motivated, supportive, self-starting software engineer with experience throughout the stack and emphasis on quality, good practices, and simplicity',
   workHistory: [
     {
       title: 'Senior Software Engineer',

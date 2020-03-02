@@ -10,7 +10,7 @@
          <div class="submenu-content">
            <router-link to="/projects/synthwave">Project 1</router-link>
            <router-link to="/projects/project2">Project 2</router-link>
-           <router-link to="/project3">Project 3</router-link>
+           <router-link to="/projects/project3">Project 3</router-link>
          </div>
        </div>
     </div>
