@@ -2,23 +2,25 @@
   <div class="about">
     <h1>About</h1>
     <div>
-      <HelloButton/>
     </div>
     <div>
-      This webpage is a simple application to show my understanding of Vue.js. It uses vue-router for routing, Babel for ES6 transpilation and Webpack for bundling. I also created a Dockerfile to run the application in a containerized development server.
+      Resume-vue is a Vue.js app I built to show my resume and portfolio as an interactive web app. Although simple, the app fetches its data from the <a href="http://resume-api-rails.herokuapp.com">Resume API</a> service I also developed. It uses vue-router for routing, Babel for ES6 transpilation and Webpack for bundling.
     </div>
     <div>
-      The source code is available at <a href='http://github.com/speakingcode/resume-vue'>github.com/speakingcode/resume-vue</a>
+      <GlareButton url="http://github.com/speakingcode/resume-vue">
+      View on Github
+      </GlareButton>
     </div>
+
   </div>
 </template>
 
 <script>
-import HelloButton from '../components/HelloButton'
+import GlareButton from '../components/GlareButton'
 
 export default {
   components: {
-    HelloButton
+    GlareButton
   }
 }
 </script>
