@@ -1,17 +1,16 @@
 <template>
   <button
-    class="hello-button glare-btn"
+    class="glare-btn"
     :class="className"
-    @click="helloWorld"
+    @click="go"
   >
-    <i class="fa fa-globe"></i>
-    Hello <strong>World</strong>
+    <slot></slot>
     <div class="glare"/>
   </button>
 </template>
 
 <style scoped>
-.hello-button {
+.glare-btn {
   color: #e9e9e9;
   background-color: #39abe1;
   border-color: #3d9ac5;
@@ -70,9 +69,12 @@ export default {
   data: () => ({
     className: ''
   }),
+  props: {
+    url: String
+  },
   methods: {
-    helloWorld: function () {
-      window.location = 'mailto:info@juiceplus.com'
+    go: function () {
+      window.location = this.url
     }
   }
 }
