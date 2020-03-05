@@ -6,8 +6,8 @@
         v-for='(comm, index) in communityEfforts'
         :key='index'
       >
-        {{comm.description}}{{comm.date ? ' - ' + comm.date : '' }}<br/>
-        {{comm.url ? '(' + comm.url + ')' : '' }}
+        {{comm.description}}{{comm.date ? ' (' + comm.date + ')' : '' }}<br/>
+        <a v-if="comm.url" :href="comm.url" target="_blank">{{comm.url}}</a>
       </li>
     </ul>
   </div>

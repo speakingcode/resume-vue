@@ -5,12 +5,12 @@
       <Summary :summary="resume.summary"/>
       <WorkHistory :work-history='resume.workHistory'/>
       <StartupExperience :startup-experience='resume.startupExperience' />
+      <CommunityEfforts :community-efforts='resume.communityEfforts' />
       <SkillSet
         v-for='(skillset, index) in resume.skillsets'
         :key='index'
         :skill-set='skillset'
       />
-      <CommunityEfforts :community-efforts='resume.communityEfforts' />
     </div>
   </div>
 </template>
@@ -25,8 +25,8 @@
 import Summary from '../components/resume/Summary'
 import WorkHistory from '../components/resume/WorkHistory'
 import StartupExperience from '../components/resume/StartupExperience'
-import SkillSet from '../components/resume/SkillSet'
 import CommunityEfforts from '../components/resume/CommunityEfforts'
+import SkillSet from '../components/resume/SkillSet'
 
 // import resume from '../data/resumeData.js'
 const toCamel = str => str.replace(
@@ -75,7 +75,7 @@ export default {
     resume: {}
   }),
   mounted () {
-    fetch('http://localhost:3069/api/v1/resume.json')
+    fetch('http://resume-api-rails.herokuapp.com/api/v1/resume.json')
       .then(response => response.json())
       .then(resume => { this.resume = keysToCamel(resume) })
   }
