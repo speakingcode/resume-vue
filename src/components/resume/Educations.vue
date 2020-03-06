@@ -1,18 +1,29 @@
 <template>
   <div class="educations">
-    <h3>Education:</h3>
-    <div
-      v-for='(edu, index) in educations'
-      :key='index'
-      class="education"
+    <b-button
+      block
+      v-b-toggle="'educations'"
+      class="section-header"
     >
-      <h4
-        class="education-degree"
+      Education:
+    </b-button>
+    <b-collapse
+      id="educations"
+      accordion="resume"
+    >
+      <div
+        v-for='(edu, index) in educations'
+        :key='index'
+        class="section-content education"
       >
-        {{edu.degree}}, {{edu.department}}
-      </h4>
-      {{edu.institution}}, {{edu.year}}
-    </div>
+        <h4
+          class="education-degree"
+        >
+          {{edu.degree}}, {{edu.department}}
+        </h4>
+        {{edu.institution}}, {{edu.year}}
+      </div>
+    </b-collapse>
   </div>
 </template>
 

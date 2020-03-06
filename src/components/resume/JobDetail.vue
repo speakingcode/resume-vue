@@ -1,7 +1,9 @@
 <template>
   <div class="job-detail">
-    <h4>{{job.title}}, {{job.startDate}} - {{job.endDate}}</h4>
-    <div>{{job.companyName}}, {{teamName}} {{job.location}}</div>
+
+    <h4>{{job.title}}</h4>
+    <h5>{{job.companyName}}, {{teamName}} {{job.location}}</h5>
+    <h5>{{job.startDate}} - {{job.endDate}}</h5>
     <ul>
       <li
         v-for='highlight in job.highlights'

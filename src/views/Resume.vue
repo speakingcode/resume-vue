@@ -2,7 +2,11 @@
   <div class="resume">
     <h1>Resume</h1>
     <div class="resume-content">
-      <Summary :summary="resume.summary"/>
+      <Summary
+        :summary="resume.summary"
+        :name="resume.name"
+        :title="resume.title"
+      />
       <WorkHistory :work-history='resume.workHistory'/>
       <StartupExperience :startup-experience='resume.startupExperience' />
       <CommunityEfforts :community-efforts='resume.communityEfforts' />
@@ -11,6 +15,7 @@
         :key='index'
         :skill-set='skillset'
       />
+      <Educations :educations='resume.educations' />
     </div>
   </div>
 </template>
@@ -18,6 +23,21 @@
 <style>
 .resume-content {
   text-align: left;
+}
+
+.section {
+  margin-bottom: 10px;
+}
+
+.section-header {
+  background-color: #fff !important;
+  color: #2c3e50 !important;
+  font-weight: bold !important;
+  text-align: left !important;
+}
+
+.section-content {
+  padding-top: 10px;
 }
 </style>
 
@@ -27,6 +47,7 @@ import WorkHistory from '../components/resume/WorkHistory'
 import StartupExperience from '../components/resume/StartupExperience'
 import CommunityEfforts from '../components/resume/CommunityEfforts'
 import SkillSet from '../components/resume/SkillSet'
+import Educations from '../components/resume/Educations'
 
 // import resume from '../data/resumeData.js'
 const toCamel = str => str.replace(
@@ -69,7 +90,8 @@ export default {
     WorkHistory,
     StartupExperience,
     SkillSet,
-    CommunityEfforts
+    CommunityEfforts,
+    Educations
   },
   data: () => ({
     resume: {}

@@ -1,6 +1,7 @@
 <template>
   <div class='summary'>
-    <h3>Summary:</h3>
+    <h3>{{name}}</h3>
+    <h4>{{title}}</h4>
     <p>
       {{summary}}
     </p>
@@ -10,7 +11,9 @@
 <script>
 export default {
   props: {
-    summary: String
+    summary: String,
+    name: String,
+    title: String
   }
 }
 </script>

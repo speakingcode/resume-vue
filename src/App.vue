@@ -25,7 +25,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  padding: 0% 15% 0 15%
+  padding: 0% 21% 10px 21%
 }
 
 a:link, a:visited {

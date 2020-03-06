@@ -1,14 +1,26 @@
 <template>
-  <div class="skill-set">
-    <h3>{{skillSet.title}}</h3>
-    <ul class="skill-list">
-      <li
-        v-for='skill in skillSet.skills'
-        :key='skill'
-      >
-        {{skill}}
-      </li>
-    </ul>
+  <div class="section skill-set">
+    <b-button
+      block
+      v-b-toggle="`skillset-${skillSet.id}`"
+      class="section-header"
+    >
+      {{skillSet.title}}:
+    </b-button>
+
+    <b-collapse
+      :id="`skillset-${skillSet.id}`"
+      accordion="resume"
+    >
+      <ul class="section-content skill-list">
+        <li
+          v-for='skill in skillSet.skills'
+          :key='skill'
+        >
+          {{skill}}
+        </li>
+      </ul>
+    </b-collapse>
   </div>
 </template>
 
